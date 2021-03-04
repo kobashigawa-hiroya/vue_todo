@@ -15,6 +15,8 @@
       <span>{{ item.id }}</span>
       <span>{{ item.content }}</span>
       <input type="text" v-model="item.content"><br>
+      <!--input type="text" v-model="item.content"-->
+      <!--という１行を加えるだけでタスクの中身と入力フォームが同期されます。-->
 <button v-on:click="deleteTask(item)">削除</button>
     </div>
   </div>

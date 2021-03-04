@@ -4,17 +4,23 @@ var app = new Vue({
     todolists: [{
         id: 1,
         content: "歯磨き",
-        isCompleted: false
+        isCompleted: false,
+        isEditing: false
       },
       {
         id: 1,
         content: "買い物",
-        isCompleted: false
+        isCompleted: false,
+        isEditing: false
       },
       {
         id: 1,
         content: "勉強",
-        isCompleted: false
+        isCompleted: false,
+        isEditing: false
+        //どちらか片方がでるようにするために、dataに項目を付け足す'isEditing'という状態を持たせます。
+
+
       },
     ]
   },
