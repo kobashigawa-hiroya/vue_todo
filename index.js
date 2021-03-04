@@ -61,6 +61,7 @@ var app = new Vue({
     },
     changeState: function (item) {
       item.isCompleted = !item.isCompleted;
+      //item.isCompletedの中身を反転させます。trueだったらfalse、falseだったらtrueにします。
     }
   }
 });
