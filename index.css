@@ -24,3 +24,45 @@ header,.input-form{
   align-items: center;
   margin:1rem;
 }
+
+.input-form input,
+.input-form button,
+.todo-list button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-form button ,
+.todo-list button {
+  color: #E4CC37;
+  transition: all 0.3s ease;
+  margin:auto 0;
+}
+
+.input-form{
+  margin:1rem 1rem 2rem;
+}
+
+.input-form button:hover ,
+.todo-list button:hover {
+  opacity:0.7;
+}
+
+.todo-list .check-button {
+  background: #8FC93A;
+  color: white;
+}
+
+.todo-list .delete-button {
+  background: #EE6C4D;
+  color: white;
+}
+
+.input-form button:active ,
+.todo-list button:active {
+  background: #4e3934;
+}
