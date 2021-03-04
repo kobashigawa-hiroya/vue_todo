@@ -14,7 +14,7 @@
     
       <span>{{ item.id }}</span>
       <span>{{ item.content }}</span>
-      <span>{{ item.isComplete }}</span>
+      <input type="text" v-model="item.content"><br>
 <button v-on:click="deleteTask(item)">削除</button>
     </div>
   </div>
