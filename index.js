@@ -53,6 +53,9 @@ var app = new Vue({
     },
     editTask: function (item) {
       item.isEditing = true;
+    },
+    doneEdit: function (item) {
+      item.isEditing = false
     }
   }
 });
