@@ -13,7 +13,8 @@
     <div v-for="item in todolists" v-bind:key="item.id">
     
       <span>{{ item.id }}</span>
-      <span>{{ item.content }}</span>
+      <span v-if="!item.isEditing">{{ item.content }}</span><br>
+      <!--isEditingがtrueかfalseかで表示を切り替え-->
       <input type="text" v-model="item.content"><br>
       <!--input type="text" v-model="item.content"-->
       <!--という１行を加えるだけでタスクの中身と入力フォームが同期されます。-->

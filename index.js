@@ -50,6 +50,9 @@ var app = new Vue({
       this.todolists.splice(index, 1);
       //spliceを使って配列から取り除く
       //todolistsはデータバインディングされているので、配列要素を変更するだけで結果が反映されます
+    },
+    editTask: function (item) {
+      item.isEditing = true;
     }
   }
 });
