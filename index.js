@@ -17,5 +17,13 @@ var app = new Vue({
         isCompleted: false
       },
     ]
+  },
+  methods: {
+    addTask: function () {
+      var new_content = this.$refs.new_content.value;
+      if (new_content.trim().length == 0 {
+
+        })
+    }
   }
 });
