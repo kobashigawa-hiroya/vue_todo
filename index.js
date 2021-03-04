@@ -37,6 +37,13 @@ var app = new Vue({
         isCompleted: false,
         isEditing: false
       });
+    },
+    deleteTask: function (item) {
+      //var index の中に引数(item)がtodolistsの何個目の要素かを代入します
+      var index = this.todolists.indexOf(item);
+      this.todolists.splice(index, 1);
+      //spliceを使って配列から取り除く
+      //todolistsはデータバインディングされているので、配列要素を変更するだけで結果が反映されます
     }
   }
 });
