@@ -10,10 +10,12 @@
 <body>
   <h1>今日こなして行こうぜ！！！</h1>
   <div id = "app">
-    <input type="text" ref="new_content" @keyup.enter="addTask">
-    <button v-on:click="addTask">追加</button><br><br>
+    <div class="input-form">
+      <input type="text" ref="new_content" @keyup.enter="addTask">
+      <button v-on:click="addTask">追加</button><br><br>
+    </div>
+    <div class="todo-container">
     <div v-for="item in todolists" v-bind:key="item.id">
-    
       <span>{{ item.id }}</span>
       <span v-if="!item.isEditing" v-on:dbclick="editTask(item)">{{ item.content }}</span><br>
       <!--isEditingがtrueかfalseかで表示を切り替え-->
@@ -25,10 +27,11 @@
 <button v-on:click="deleteTask(item)">削除</button>
 <button v-on:click="changeState(item)">
   <span v-if="item.isComplete">完了</span>
-  <span v-else></span>
+  <span v-else>未完了</span>
 </button>
     </div>
   </div>
+</div>
     <script src = "index.js"></script>
 </body>
 </html> 
