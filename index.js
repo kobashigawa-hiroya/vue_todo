@@ -1,6 +1,6 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'HEllo vue.js'
+    message: 'HEllo world vue.js'
   }
 });
