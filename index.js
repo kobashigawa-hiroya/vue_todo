@@ -22,6 +22,7 @@ var app = new Vue({
     addTask: function () {
       var new_content = this.$refs.new_content.value;
       if (new_content.trim().length == 0) {
+        //if (new_content.trim().length == 0)でフォームが空白の状態ではボタンが反応しない
         return;
       }
       var ids = this.todolists.map(function (todo) {
@@ -30,7 +31,12 @@ var app = new Vue({
       var max_id = ids.reduce(function (a, b) {
         return Math.max(a, b);
       });
-
+      this.todolists.push({
+        content: new_content,
+        id: max_id + 1,
+        isCompleted: false,
+        isEditing: false
+      });
     }
   }
 });
