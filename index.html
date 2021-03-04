@@ -11,10 +11,11 @@
     <input type="text" ref="new_content" @keyup.enter="addTask">
     <button v-on:click="addTask">追加</button><br><br>
     <div v-for="item in todolists" v-bind:key="item.id">
+    
       <span>{{ item.id }}</span>
       <span>{{ item.content }}</span>
       <span>{{ item.isComplete }}</span>
-
+<button v-on:click="deleteTask(item)">削除</button>
     </div>
   </div>
     <script src = "index.js"></script>
