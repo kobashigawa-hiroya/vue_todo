@@ -28,7 +28,7 @@
     <!--editTaskとdoneEditが呼び出されるようにv-onを使用-->
       <!--input type="text" v-model="item.content"-->
       <!--という１行を加えるだけでタスクの中身と入力フォームが同期されます。-->
-<button v-on:click="deleteTask(item)"><i class="fas fa-trash"></i></button>
+<button class="btn btn-outline-warning" v-on:click="deleteTask(item)"><i class="fas fa-trash"></i></button>
 <button v-on:click="changeState(item)">
   <span v-if="item.isCompleted"><class class="far fa-check-square"></class></span>
   <span v-else><i class="far fa-square"></i></span>

@@ -55,6 +55,7 @@ header,.input-form{
 .todo-list .check-button {
   background: #8FC93A;
   color: white;
+  margin: 0;
 }
 
 .todo-list .delete-button {
