@@ -66,3 +66,7 @@ header,.input-form{
 .todo-list button:active {
   background: #4e3934;
 }
+
+span {
+  font-size: 50px;
+}
