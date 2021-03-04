@@ -21,9 +21,13 @@ var app = new Vue({
   methods: {
     addTask: function () {
       var new_content = this.$refs.new_content.value;
-      if (new_content.trim().length == 0 {
+      if (new_content.trim().length == 0) {
+        return;
+      }
+      var ids = this.todolists.map(function (todo) {
+        return todo.id;
+      })
 
-        })
     }
   }
 });
