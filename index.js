@@ -26,7 +26,10 @@ var app = new Vue({
       }
       var ids = this.todolists.map(function (todo) {
         return todo.id;
-      })
+      });
+      var max_id = ids.reduce(function (a, b) {
+        return Math.max(a, b);
+      });
 
     }
   }
