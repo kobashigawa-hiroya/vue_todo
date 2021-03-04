@@ -13,9 +13,11 @@
     <div v-for="item in todolists" v-bind:key="item.id">
     
       <span>{{ item.id }}</span>
-      <span v-if="!item.isEditing">{{ item.content }}</span><br>
+      <span v-if="!item.isEditing" v-on:dbclick="editTask(item)">{{ item.content }}</span><br>
       <!--isEditingがtrueかfalseかで表示を切り替え-->
-      <input type="text" v-model="item.content"><br>
+      <input v-else type="text" v-model="item.content" v-on:blur="doneEdit(item)" v-on:keyup.enter="doneEdit(item)"><br>
+    <!--v-on:blurは要素のフォーカスが解除された時に動作-->
+    <!--editTaskとdoneEditが呼び出されるようにv-onを使用-->
       <!--input type="text" v-model="item.content"-->
       <!--という１行を加えるだけでタスクの中身と入力フォームが同期されます。-->
 <button v-on:click="deleteTask(item)">削除</button>

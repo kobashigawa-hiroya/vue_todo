@@ -26,6 +26,7 @@ var app = new Vue({
   },
   methods: {
     addTask: function () {
+      this.todolists.forEach((todo) => todo.isEditing = false);
       var new_content = this.$refs.new_content.value;
       if (new_content.trim().length == 0) {
         //if (new_content.trim().length == 0)でフォームが空白の状態ではボタンが反応しない
@@ -52,10 +53,14 @@ var app = new Vue({
       //todolistsはデータバインディングされているので、配列要素を変更するだけで結果が反映されます
     },
     editTask: function (item) {
+      this.todolists.forEach((todo) => todo.isEditing = false);
       item.isEditing = true;
     },
     doneEdit: function (item) {
       item.isEditing = false
+    },
+    changeState: function (item) {
+      item.isCompleted = !item.isCompleted;
     }
   }
 });
