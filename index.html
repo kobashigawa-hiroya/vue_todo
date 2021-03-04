@@ -8,14 +8,16 @@
     <title>title</title>
 </head>
 <body>
-  <h1>今日こなして行こうぜ！！！</h1>
+  <header>
+    <h1>今日こなして行こうぜ！！！</h1>
+  </header>
   <div id = "app">
     <div class="input-form">
       <input type="text" ref="new_content" @keyup.enter="addTask">
       <button v-on:click="addTask">追加</button><br><br>
     </div>
     <div class="todo-container">
-    <div v-for="item in todolists" v-bind:key="item.id">
+    <div class="todo-list" v-for="item in todolists" v-bind:key="item.id">
       <span>{{ item.id }}</span>
       <span v-if="!item.isEditing" v-on:dbclick="editTask(item)">{{ item.content }}</span><br>
       <!--isEditingがtrueかfalseかで表示を切り替え-->

@@ -12,3 +12,15 @@ body{
     Meiryo,
     sans-serif;
 }
+header,.input-form{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:1rem;
+}
