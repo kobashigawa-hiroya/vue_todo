@@ -29,8 +29,8 @@
       <!--という１行を加えるだけでタスクの中身と入力フォームが同期されます。-->
 <button v-on:click="deleteTask(item)">削除</button>
 <button v-on:click="changeState(item)">
-  <span v-if="item.isComplete">完了</span>
-  <span v-else>未完了</span>
+  <span v-if="item.isCompleted"><i class="far fa-check-square"></i></span>
+  <span v-else><i class="far fa-square"></i></span>
 </button>
     </div>
   </div>
